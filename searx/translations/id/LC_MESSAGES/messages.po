@@ -22,16 +22,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-05-13 19:13+0000\n"
-"PO-Revision-Date: 2025-03-31 14:03+0000\n"
+"POT-Creation-Date: 2025-06-23 21:05+0000\n"
+"PO-Revision-Date: 2025-06-25 08:05+0000\n"
 "Last-Translator: Linerly <linerly@noreply.codeberg.org>\n"
+"Language-Team: Indonesian <https://translate.codeberg.org/projects/searxng/"
+"searxng/id/>\n"
 "Language: id\n"
-"Language-Team: Indonesian "
-"<https://translate.codeberg.org/projects/searxng/searxng/id/>\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.11.4\n"
 "Generated-By: Babel 2.17.0\n"
 
 #. CONSTANT_NAMES['NO_SUBGROUPING']
@@ -190,7 +191,7 @@ msgid "Average temp."
 msgstr "suhu rata‐rata."
 
 #. WEATHER_TERMS['CLOUD COVER']
-#: searx/engines/open_meteo.py:91 searx/searxng.msg
+#: searx/searxng.msg
 msgid "Cloud cover"
 msgstr "Tutupan awan"
 
@@ -212,14 +213,14 @@ msgid "Evening"
 msgstr "Sore"
 
 #. WEATHER_TERMS['FEELS LIKE']
-#: searx/engines/duckduckgo_weather.py:53 searx/engines/open_meteo.py:81
-#: searx/engines/wttr.py:59 searx/searxng.msg
+#: searx/engines/duckduckgo_weather.py:53 searx/engines/wttr.py:59
+#: searx/searxng.msg
 msgid "Feels like"
 msgstr "terasa seperti"
 
 #. WEATHER_TERMS['HUMIDITY']
-#: searx/engines/duckduckgo_weather.py:64 searx/engines/open_meteo.py:93
-#: searx/engines/wttr.py:68 searx/searxng.msg
+#: searx/engines/duckduckgo_weather.py:64 searx/engines/wttr.py:68
+#: searx/searxng.msg searx/templates/simple/answer/weather.html:29
 msgid "Humidity"
 msgstr "kelembapan"
 
@@ -251,7 +252,7 @@ msgid "Noon"
 msgstr "Siang"
 
 #. WEATHER_TERMS['PRESSURE']
-#: searx/engines/open_meteo.py:95 searx/searxng.msg
+#: searx/searxng.msg searx/templates/simple/answer/weather.html:25
 msgid "Pressure"
 msgstr "Tekanan"
 
@@ -268,8 +269,8 @@ msgid "Sunset"
 msgstr "Senja"
 
 #. WEATHER_TERMS['TEMPERATURE']
-#: searx/engines/duckduckgo_weather.py:48 searx/engines/open_meteo.py:76
-#: searx/engines/wttr.py:55 searx/searxng.msg
+#: searx/engines/duckduckgo_weather.py:48 searx/engines/wttr.py:55
+#: searx/searxng.msg searx/templates/simple/answer/weather.html:17
 msgid "Temperature"
 msgstr "Suhu"
 
@@ -286,10 +287,215 @@ msgid "Visibility"
 msgstr "Jarak pandang"
 
 #. WEATHER_TERMS['WIND']
-#: searx/engines/duckduckgo_weather.py:58 searx/engines/open_meteo.py:86
-#: searx/engines/wttr.py:62 searx/searxng.msg
+#: searx/engines/duckduckgo_weather.py:58 searx/engines/wttr.py:62
+#: searx/searxng.msg searx/templates/simple/answer/weather.html:23
 msgid "Wind"
 msgstr "Angin"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Clear sky"
+msgstr "Langit cerah"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Cloudy"
+msgstr "Berawan"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Fair"
+msgstr "Cerah"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Fog"
+msgstr "Berkabut"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Heavy rain and thunder"
+msgstr "Hujan lebat dan guntur"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Heavy rain showers and thunder"
+msgstr "Hujan lebat disertai guntur"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Heavy rain showers"
+msgstr "Hujan lebat"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Heavy rain"
+msgstr "Hujan lebat"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Heavy sleet and thunder"
+msgstr "Hujan es lebat dan guntur"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Heavy sleet showers and thunder"
+msgstr "Hujan es lebat disertai guntur"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Heavy sleet showers"
+msgstr "Hujan es lebat"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Heavy sleet"
+msgstr "Hujan es lebat"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Heavy snow and thunder"
+msgstr "Salju lebat dan guntur"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Heavy snow showers and thunder"
+msgstr "Hujan salju lebat disertai guntur"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Heavy snow showers"
+msgstr "Hujan salju lebat"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Heavy snow"
+msgstr "Salju lebat"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Light rain and thunder"
+msgstr "Hujan ringan dan guntur"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Light rain showers and thunder"
+msgstr "Hujan ringan disertai guntur"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Light rain showers"
+msgstr "Hujan ringan"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Light rain"
+msgstr "Hujan ringan"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Light sleet and thunder"
+msgstr "Hujan es ringan dan guntur"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Light sleet showers and thunder"
+msgstr "Hujan es ringan disertai guntur"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Light sleet showers"
+msgstr "Hujan es ringan"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Light sleet"
+msgstr "Hujan es ringan"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Light snow and thunder"
+msgstr "Salju ringan dan guntur"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Light snow showers and thunder"
+msgstr "Hujan salju ringan disertai guntur"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Light snow showers"
+msgstr "Hujan salju ringan"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Light snow"
+msgstr "Salju ringan"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Partly cloudy"
+msgstr "Berawan sebagian"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Rain and thunder"
+msgstr "Hujan dan guntur"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Rain showers and thunder"
+msgstr "Hujan disertai guntur"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Rain showers"
+msgstr "Hujan"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Rain"
+msgstr "Hujan"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Sleet and thunder"
+msgstr "Hujan es dan guntur"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Sleet showers and thunder"
+msgstr "Hujan es disertai guntur"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Sleet showers"
+msgstr "Hujan es"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Sleet"
+msgstr "Hujan es"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Snow and thunder"
+msgstr "Salju dan guntur"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Snow showers and thunder"
+msgstr "Hujan salju disertai guntur"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Snow showers"
+msgstr "Hujan salju"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Snow"
+msgstr "Salju"
 
 #. SOCIAL_MEDIA_TERMS['SUBSCRIBERS']
 #: searx/engines/lemmy.py:85 searx/searxng.msg
@@ -352,28 +558,28 @@ msgstr "Tertutup"
 msgid "answered"
 msgstr "dijawab"
 
-#: searx/webapp.py:291
+#: searx/webapp.py:292
 msgid "No item found"
 msgstr "Item tidak ditemukan"
 
 #: searx/engines/qwant.py:291
-#: searx/templates/simple/result_templates/images.html:23 searx/webapp.py:293
+#: searx/templates/simple/result_templates/images.html:23 searx/webapp.py:294
 msgid "Source"
 msgstr "Sumber"
 
-#: searx/webapp.py:295
+#: searx/webapp.py:296
 msgid "Error loading the next page"
 msgstr "Gagal memuat laman berikutnya"
 
-#: searx/webapp.py:446 searx/webapp.py:844
+#: searx/webapp.py:447 searx/webapp.py:845
 msgid "Invalid settings, please edit your preferences"
 msgstr "Pengaturan takvalid. Mohon ubah preferensi Anda"
 
-#: searx/webapp.py:462
+#: searx/webapp.py:463
 msgid "Invalid settings"
 msgstr "Pengaturan takvalid"
 
-#: searx/webapp.py:539 searx/webapp.py:629
+#: searx/webapp.py:540 searx/webapp.py:630
 msgid "search error"
 msgstr "galat pencarian"
 
@@ -546,11 +752,15 @@ msgstr "Hitung ekspresi matematika di bilah pencarian"
 msgid "Hash plugin"
 msgstr "Plugin hash"
 
-#: searx/plugins/hash_plugin.py:35
-msgid "Converts strings to different hash digests."
-msgstr "Mengubah untaian (string) menjadi pilah digest (hash digest) yang berbeda."
+#: searx/plugins/hash_plugin.py:36
+msgid ""
+"Converts strings to different hash digests. Available functions: md5, "
+"sha1, sha224, sha256, sha384, sha512."
+msgstr ""
+"Mengubah string ke keluaran hash. Fungsi tersedia: md5, sha1, sha224, "
+"sha256, sha384, sha512."
 
-#: searx/plugins/hash_plugin.py:62
+#: searx/plugins/hash_plugin.py:64
 msgid "hash digest"
 msgstr "pilah digest"
 
@@ -559,8 +769,9 @@ msgid "Hostnames plugin"
 msgstr "Plugin nama hos"
 
 #: searx/plugins/hostnames.py:124
-msgid "Rewrite hostnames, remove results or prioritize them based on the hostname"
-msgstr "Tulis ulang nama hos, hapus atau prioritaskan hasil berdasarkan nama hos"
+msgid "Rewrite hostnames and remove or prioritize results based on the hostname"
+msgstr ""
+"Tulis ulang nama hos dan hapus atau prioritaskan hasil berdasarkan nama hos"
 
 #: searx/plugins/oa_doi_rewrite.py:55
 msgid "Open Access DOI rewrite"
@@ -617,11 +828,11 @@ msgstr "Anda menggunakan Tor dan sepertinya Anda memiliki alamat IP eksternal"
 msgid "You are not using Tor and you have the external IP address"
 msgstr "Anda tidak menggunakan Tor dan Anda memiliki alamat IP eksternal"
 
-#: searx/plugins/tracker_url_remover.py:37
+#: searx/plugins/tracker_url_remover.py:35
 msgid "Tracker URL remover"
 msgstr "Penghapus URL pelacak"
 
-#: searx/plugins/tracker_url_remover.py:38
+#: searx/plugins/tracker_url_remover.py:36
 msgid "Remove trackers arguments from the returned URL"
 msgstr "Menghapus argumen pelacak dari URL yang dikembalikan"
 
@@ -632,6 +843,11 @@ msgstr "Plugin konverter satuan"
 #: searx/plugins/unit_converter.py:50
 msgid "Convert between units"
 msgstr "Konversikan antarsatuan"
+
+#: searx/result_types/answer.py:224
+#, python-brace-format
+msgid "{location}: {temperature}, {condition}"
+msgstr "{location}: {temperature}, {condition}"
 
 #: searx/templates/simple/404.html:4
 msgid "Page not found"
@@ -947,6 +1163,10 @@ msgstr "Definisi"
 msgid "Synonyms"
 msgstr "Sinonim"
 
+#: searx/templates/simple/answer/weather.html:19
+msgid "Feels Like"
+msgstr "Terasa Seperti"
+
 #: searx/templates/simple/elements/answers.html:2
 msgid "Answers"
 msgstr "Jawaban"
@@ -1124,16 +1344,16 @@ msgid "Autocomplete"
 msgstr "Lengkapi entri pencarian secara otomatis"
 
 #: searx/templates/simple/preferences/autocomplete.html:15
-msgid "Find stuff as you type"
-msgstr "Cari hal-hal saat Anda mengetik"
+msgid "Show possible queries as you type"
+msgstr "Tampilkan kueri yang memungkinkan selagi Anda mengetik"
 
 #: searx/templates/simple/preferences/center_alignment.html:2
 msgid "Center Alignment"
 msgstr "Penjajaran Tengah"
 
 #: searx/templates/simple/preferences/center_alignment.html:14
-msgid "Displays results in the center of the page (Oscar layout)."
-msgstr "Tampilkan hasil pada bagian tengah halaman (tata letak Oscar)."
+msgid "Display results in the center of the page (Oscar layout)."
+msgstr "Tampilkan hasil pada tengah laman (tata letak Oscar)."
 
 #: searx/templates/simple/preferences/cookies.html:2
 msgid ""
@@ -1144,8 +1364,8 @@ msgstr ""
 "disimpan SearXNG di komputer Anda."
 
 #: searx/templates/simple/preferences/cookies.html:3
-msgid "With that list, you can assess SearXNG transparency."
-msgstr "Anda dapat menilai transparansi SearXNG dengan daftar tersebut."
+msgid "With this list, you can assess the transparency of SearXNG."
+msgstr "Dengan daftar ini, Anda dapat meninjau transparansi SearXNG."
 
 #: searx/templates/simple/preferences/cookies.html:9
 msgid "Cookie name"
@@ -1206,11 +1426,11 @@ msgstr "Pilih layanan yang digunakan oleh penulisan ulang DOI"
 
 #: searx/templates/simple/preferences/engines.html:9
 msgid ""
-"This tab does not exists in the user interface, but you can search in "
-"these engines by its !bangs."
+"This tab does not exist in the user interface, but you can search with "
+"these engines via !bangs."
 msgstr ""
-"Tab ini tidak tersedia di antarmuka pengguna, tetapi Anda dapat mencari "
-"pada mesin ini dengan memasukkan kata kunci !bang."
+"Tab ini tidak ada dalam pengaturan pengguna, tetapi Anda dapat mencari "
+"dengan mesin-mesin ini melalui !bang."
 
 #: searx/templates/simple/preferences/engines.html:15
 msgid "Enable all"
@@ -1246,19 +1466,17 @@ msgstr "Tampilkan favikon"
 
 #: searx/templates/simple/preferences/footer.html:2
 msgid ""
-"These settings are stored in your cookies, this allows us not to store "
+"These settings are stored in your cookies. This allows us not to store "
 "this data about you."
 msgstr ""
-"Pengaturan ini disimpan pada kuki Anda, sehingga kami tidak dapat "
-"menyimpan data apa pun tentang Anda."
+"Pengaturan ini disimpan dalam kuki Anda. Ini memungkinkan kami untuk tidak "
+"menyimpan data ini tentang Anda."
 
 #: searx/templates/simple/preferences/footer.html:3
-msgid ""
-"These cookies serve your sole convenience, we don't use these cookies to "
-"track you."
+msgid "These cookies serve your sole convenience; we don't use them to track you."
 msgstr ""
-"Kuki ini hanya dinyalakan demi kenyamanan Anda semata. Kuki ini tidak "
-"kami gunakan untuk melacak Anda."
+"Kuki ini menyediakan kenyamanan Anda; kami tidak menggunakannya untuk "
+"melacak Anda."
 
 #: searx/templates/simple/preferences/footer.html:6
 msgid "Save"
@@ -1293,18 +1511,19 @@ msgid "Image proxy"
 msgstr "Proksi gambar"
 
 #: searx/templates/simple/preferences/image_proxy.html:14
-msgid "Proxying image results through SearXNG"
-msgstr "Memproksikan hasil gambar melalui SearXNG"
+msgid "Proxy image results through SearXNG"
+msgstr "Proksi hasil gambar melalui SearXNG"
 
 #: searx/templates/simple/preferences/infinite_scroll.html:2
 msgid "Infinite scroll"
 msgstr "Guliran takterbatas"
 
 #: searx/templates/simple/preferences/infinite_scroll.html:14
-msgid "Automatically load next page when scrolling to bottom of current page"
+msgid ""
+"Automatically load the next page when scrolling to the bottom of the "
+"current page"
 msgstr ""
-"Secara otomatis memuat laman selanjutnya saat menggulir ke bawah laman "
-"saat ini"
+"Muat laman berikutnya secara otomatis saat menggulir ke bawah laman saat ini"
 
 #: searx/templates/simple/preferences/language.html:24
 msgid "What language do you prefer for search?"
@@ -1337,12 +1556,12 @@ msgstr ""
 "Peramban Anda dapat menyimpan judul ini"
 
 #: searx/templates/simple/preferences/results_on_new_tab.html:2
-msgid "Results on new tabs"
-msgstr "Hasil pada tab baru"
+msgid "Results in new tabs"
+msgstr "Hasil dalam tab baru"
 
 #: searx/templates/simple/preferences/results_on_new_tab.html:14
-msgid "Open result links on new browser tabs"
-msgstr "Buka tautan hasil pada tab-peramban baru"
+msgid "Open result links in new browser tabs"
+msgstr "Buka tautan hasil dalam tab peramban baru"
 
 #: searx/templates/simple/preferences/safesearch.html:20
 msgid "Filter content"
@@ -1354,18 +1573,18 @@ msgstr "Cari berdasarkan pilihan kategori"
 
 #: searx/templates/simple/preferences/search_on_category_select.html:14
 msgid ""
-"Perform search immediately if a category selected. Disable to select "
-"multiple categories"
+"Perform a search immediately if a category is selected. Disable to select"
+" multiple categories"
 msgstr ""
-"Melakukan pencarian dengan segera jika satu kategori dipilih. Nonaktifkan"
-" untuk memilih beberapa kategori"
+"Langsung melakukan pencarian jika kategori dipilih. Nonaktifkan untuk "
+"memilih beberapa kategori"
 
 #: searx/templates/simple/preferences/theme.html:2
 msgid "Theme"
 msgstr "Tema"
 
 #: searx/templates/simple/preferences/theme.html:14
-msgid "Change SearXNG layout"
+msgid "Change the layout of SearXNG"
 msgstr "Ubah tata letak SearXNG"
 
 #: searx/templates/simple/preferences/theme.html:19
@@ -1700,7 +1919,7 @@ msgstr "sembunyikan video"
 #~ msgstr ""
 
 #~ msgid "Displays results in the center of the page (Oscar layout)."
-#~ msgstr ""
+#~ msgstr "Tampilkan hasil pada bagian tengah halaman (tata letak Oscar)."
 
 #~ msgid "preferences"
 #~ msgstr "preferensi"
@@ -1976,3 +2195,75 @@ msgstr "sembunyikan video"
 #~ msgid "proxied"
 #~ msgstr "proksi"
 
+#~ msgid ""
+#~ "This tab does not exists in the"
+#~ " user interface, but you can search"
+#~ " in these engines by its !bangs."
+#~ msgstr ""
+#~ "Tab ini tidak tersedia di antarmuka "
+#~ "pengguna, tetapi Anda dapat mencari pada"
+#~ " mesin ini dengan memasukkan kata "
+#~ "kunci !bang."
+
+#~ msgid "Results on new tabs"
+#~ msgstr "Hasil pada tab baru"
+
+#~ msgid "Open result links on new browser tabs"
+#~ msgstr "Buka tautan hasil pada tab-peramban baru"
+
+#~ msgid "Find stuff as you type"
+#~ msgstr "Cari hal-hal saat Anda mengetik"
+
+#~ msgid "Converts strings to different hash digests."
+#~ msgstr ""
+#~ "Mengubah untaian (string) menjadi pilah "
+#~ "digest (hash digest) yang berbeda."
+
+#~ msgid ""
+#~ "Rewrite hostnames, remove results or "
+#~ "prioritize them based on the hostname"
+#~ msgstr ""
+#~ "Tulis ulang nama hos, hapus atau "
+#~ "prioritaskan hasil berdasarkan nama hos"
+
+#~ msgid "With that list, you can assess SearXNG transparency."
+#~ msgstr "Anda dapat menilai transparansi SearXNG dengan daftar tersebut."
+
+#~ msgid ""
+#~ "These settings are stored in your "
+#~ "cookies, this allows us not to "
+#~ "store this data about you."
+#~ msgstr ""
+#~ "Pengaturan ini disimpan pada kuki Anda,"
+#~ " sehingga kami tidak dapat menyimpan "
+#~ "data apa pun tentang Anda."
+
+#~ msgid ""
+#~ "These cookies serve your sole "
+#~ "convenience, we don't use these cookies"
+#~ " to track you."
+#~ msgstr ""
+#~ "Kuki ini hanya dinyalakan demi "
+#~ "kenyamanan Anda semata. Kuki ini tidak"
+#~ " kami gunakan untuk melacak Anda."
+
+#~ msgid "Proxying image results through SearXNG"
+#~ msgstr "Memproksikan hasil gambar melalui SearXNG"
+
+#~ msgid "Automatically load next page when scrolling to bottom of current page"
+#~ msgstr ""
+#~ "Secara otomatis memuat laman selanjutnya "
+#~ "saat menggulir ke bawah laman saat "
+#~ "ini"
+
+#~ msgid ""
+#~ "Perform search immediately if a category"
+#~ " selected. Disable to select multiple "
+#~ "categories"
+#~ msgstr ""
+#~ "Melakukan pencarian dengan segera jika "
+#~ "satu kategori dipilih. Nonaktifkan untuk "
+#~ "memilih beberapa kategori"
+
+#~ msgid "Change SearXNG layout"
+#~ msgstr "Ubah tata letak SearXNG"
