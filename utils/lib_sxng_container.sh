@@ -54,7 +54,7 @@ container.build() {
         platform="linux/$arch"
         ;;
     "ARMV7" | "armhf" | "armv7l" | "armv7")
-        dockerfile="legacy/Dockerfile"
+        dockerfile="Dockerfile"
         arch="arm"
         variant="v7"
         platform="linux/$arch/$variant"
@@ -93,8 +93,8 @@ container.build() {
         info_msg "Set \$GIT_BRANCH: $GIT_BRANCH"
 
         if [ "$container_engine" = "podman" ]; then
-            params_build_builder="build --format=docker --platform=$platform --target=builder --layers --identity-label=false"
-            params_build="build --format=docker --platform=$platform --layers --squash-all --omit-history --identity-label=false"
+            params_build_builder="build --format=oci --platform=$platform --target=builder --layers --identity-label=false"
+            params_build="build --format=oci --platform=$platform --layers --squash-all --omit-history --identity-label=false"
         else
             params_build_builder="build --platform=$platform --target=builder"
             params_build="build --platform=$platform --squash"
@@ -114,7 +114,6 @@ container.build() {
         # shellcheck disable=SC2086
         "$container_engine" $params_build_builder \
             --build-arg="TIMESTAMP_SETTINGS=$(git log -1 --format="%cd" --date=unix -- ./searx/settings.yml)" \
-            --build-arg="TIMESTAMP_UWSGI=$(git log -1 --format="%cd" --date=unix -- ./container/uwsgi.ini)" \
             --tag="localhost/$CONTAINER_IMAGE_ORGANIZATION/$CONTAINER_IMAGE_NAME:builder" \
             --file="./container/$dockerfile" \
             .
@@ -122,6 +121,7 @@ container.build() {
 
         # shellcheck disable=SC2086
         "$container_engine" $params_build \
+            --build-arg="TIMESTAMP_SETTINGS=$(git log -1 --format="%cd" --date=unix -- ./searx/settings.yml)" \
             --build-arg="GIT_URL=$GIT_URL" \
             --build-arg="SEARXNG_GIT_VERSION=$VERSION_STRING" \
             --build-arg="LABEL_DATE=$(date -u +%Y-%m-%dT%H:%M:%SZ)" \

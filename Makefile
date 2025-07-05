@@ -54,7 +54,7 @@ ci.test: test.yamllint test.black test.types.ci  test.pylint test.unit test.robo
 test:    test.yamllint test.black test.types.dev test.pylint test.unit test.robot test.rst test.shell
 test.shell:
 	$(Q)shellcheck -x -s dash \
-		container/docker-entrypoint.sh
+		container/entrypoint.sh
 	$(Q)shellcheck -x -s bash \
 		utils/brand.sh \
 		$(MTOOLS) \
@@ -83,7 +83,7 @@ MANAGE += py.build py.clean
 MANAGE += pyenv pyenv.install pyenv.uninstall
 MANAGE += format.python
 MANAGE += test.yamllint test.pylint test.black test.pybabel test.unit test.coverage test.robot test.rst test.clean test.themes test.types.dev test.types.ci
-MANAGE += themes.all themes.fix themes.test
+MANAGE += themes.all themes.simple themes.fix themes.lint themes.test
 MANAGE += static.build.commit static.build.drop static.build.restore
 MANAGE += nvm.install nvm.clean nvm.status nvm.nodejs
 

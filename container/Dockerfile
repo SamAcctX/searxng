@@ -5,16 +5,14 @@ COPY ./requirements.txt ./requirements.txt
 RUN --mount=type=cache,id=pip,target=/root/.cache/pip python -m venv ./venv \
  && . ./venv/bin/activate \
  && pip install -r requirements.txt \
- && pip install "uwsgi~=2.0"
+ && pip install "granian~=2.0"
 
 COPY ./searx/ ./searx/
 
 ARG TIMESTAMP_SETTINGS="0"
-ARG TIMESTAMP_UWSGI="0"
 
 RUN python -m compileall -q searx \
  && touch -c --date=@$TIMESTAMP_SETTINGS ./searx/settings.yml \
- && touch -c --date=@$TIMESTAMP_UWSGI ./container/uwsgi.ini \
  && find ./searx/static \
     \( -name "*.html" -o -name "*.css" -o -name "*.js" -o -name "*.svg" -o -name "*.ttf" -o -name "*.eot" \) \
     -type f -exec gzip -9 -k {} + -exec brotli --best {} +
@@ -29,7 +27,8 @@ ARG LABEL_VCS_URL="unspecified"
 
 COPY --chown=searxng:searxng --from=builder /usr/local/searxng/venv/ ./venv/
 COPY --chown=searxng:searxng --from=builder /usr/local/searxng/searx/ ./searx/
-COPY --chown=searxng:searxng ./container/ ./container/
+COPY --chown=searxng:searxng ./container/template/ ./.template/
+COPY --chown=searxng:searxng ./container/entrypoint.sh ./entrypoint.sh
 
 LABEL org.opencontainers.image.authors="searxng <$GIT_URL>" \
       org.opencontainers.image.created="$LABEL_DATE" \
@@ -43,20 +42,22 @@ LABEL org.opencontainers.image.authors="searxng <$GIT_URL>" \
       org.opencontainers.image.version="$SEARXNG_GIT_VERSION"
 
 ENV SEARXNG_VERSION="$SEARXNG_GIT_VERSION" \
-    INSTANCE_NAME="SearXNG" \
-    AUTOCOMPLETE="" \
-    BASE_URL="" \
-    BIND_ADDRESS="[::]:8080" \
     SEARXNG_SETTINGS_PATH="$CONFIG_PATH/settings.yml" \
-    UWSGI_SETTINGS_PATH="$CONFIG_PATH/uwsgi.ini" \
-    UWSGI_WORKERS="%k" \
-    UWSGI_THREADS="4"
+    GRANIAN_PROCESS_NAME="searxng" \
+    GRANIAN_INTERFACE="wsgi" \
+    GRANIAN_HOST="::" \
+    GRANIAN_PORT="8080" \
+    GRANIAN_WEBSOCKETS="false" \
+    GRANIAN_LOOP="uvloop" \
+    GRANIAN_BLOCKING_THREADS="4" \
+    GRANIAN_WORKERS_KILL_TIMEOUT="30" \
+    GRANIAN_BLOCKING_THREADS_IDLE_TIMEOUT="300" \
+    GRANIAN_STATIC_PATH_MOUNT="/usr/local/searxng/searx/static/" \
+    GRANIAN_STATIC_PATH_EXPIRES="3600"
 
 VOLUME $CONFIG_PATH
 VOLUME $DATA_PATH
 
 EXPOSE 8080
 
-HEALTHCHECK CMD wget --quiet --tries=1 --spider http://localhost:8080/healthz || exit 1
-
-ENTRYPOINT ["/usr/local/searxng/container/docker-entrypoint.sh"]
+ENTRYPOINT ["/usr/local/searxng/entrypoint.sh"]
